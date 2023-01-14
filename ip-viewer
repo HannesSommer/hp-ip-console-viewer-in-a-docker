@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dir=/usr/lib/IPViewer
+
+export CLASSPATH=$dir/hsqldb.jar:$dir/brand.jar:$dir/avctVideo.jar:$dir/avctProtocols.jar:$dir/avctAVWorksServices.jar:$dir/avctAVWorksNmm.jar:$dir/avctAVWorksExplorer.jar:$dir/avctAVWorksAvrNmm.jar:$dir/MibII.jar:$dir/MibAvocentDs.jar:$dir/MibAvocentCcm.jar:$dir/avctViewerApi.jar:$dir/avctUtil.jar:$dir/avctTelnet.jar:$dir/avctNet.jar:$dir/avctGUI.jar:$dir/avctDB.jar:$dir/avctAVWorksCcmNmm.jar:$dir/avctVM.jar:$dir/mindterm.jar:$dir/avctAVWorksAggregatorNmm.jar:$dir/commons-logging.jar:$dir/commons-logging-api.jar:$dir/commons-httpclient-3.0.1.jar:$dir/commons-codec-1.3.jar:$dir/lax.jar
+
+cd $dir
+exec $dir/jre/bin/java -Xmx128M -Djava.library.path=$dir -Duser.variant=hp com.zerog.lax.LAX $dir/IPViewer.lax
